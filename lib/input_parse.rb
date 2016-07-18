@@ -36,4 +36,8 @@ class InputParse
     true if is_ajacent_vertically_small?(input) == true && parse_whitespace_case(input)[0].ord == parse_whitespace_case(input)[4].ord + 2 || parse_whitespace_case(input)[0].ord == parse_whitespace_case(input)[4].ord - 2
   end
 
+  def is_valid?(input)
+    true if input.length == 4 && is_ajacent_vertically_small?(input) || is_ajacent_horizontally_small?(input) || input.length == 6 && is_ajacent_horizontally_medium?(input) || is_ajacent_vertically_medium?(input)
+  end
+
 end

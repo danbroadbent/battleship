@@ -12,6 +12,9 @@ class InputParseTest < Minitest::Test
     assert_equal "A1A2A3" , user_input.parse_whitespace_case("A1 A2 A3")
   end
 
+  def test_placement_is_on_the_board
+  end
+
   def test_it_is_case_insensitive
     user_input = InputParse.new
     assert_equal "A1A2" , user_input.parse_whitespace_case("a1 A2")
@@ -43,11 +46,17 @@ class InputParseTest < Minitest::Test
     assert user_input.is_ajacent_vertically_small?("a1 B1")
     assert user_input.is_ajacent_vertically_small?("B1 A1")
     assert user_input.is_ajacent_vertically_medium?("a1 B1 c1")
+
     refute user_input.is_ajacent_vertically_small?("a1 c1")
     refute user_input.is_ajacent_vertically_medium?("a1 b1 d1")
   end
 
   def test_it_is_a_valid_coordinate
+    user_input = InputParse.new
+    assert user_input.is_valid?("a1 a2")
+    assert user_input.is_valid?("a1 a2 A3")
+
+    refute user_input.is_valid?("a1 a3 a4")
   end
 
 end
