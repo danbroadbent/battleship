@@ -1,20 +1,22 @@
 require './lib/boards'
 require './lib/input_parse'
 
+
 class Game
+  attr_reader :computer_small_ship
+
+  def initialize
+    @computer_small_ship = ""
+  end
+
+  def generate_computer_small_ship
+    @computer_small_ship = "A1A2"
+  end
 
   def start
-    puts "Welcome to BATTLESHIP\n\nWould you like to (p)lay, read the (i)nstructions, or (q)uit?\n>"
-      player_response = gets.chomp.upcase
-      if player_response == "Q"
-        puts "you quit"
-      elsif player_response == "I"
-        puts "instructions"
-      elsif player_response == "P"
-        puts "begin game"
-      else
-        puts "Please enter a 'p', 'i', or 'q'"
-      end
-    end
+  end
+
+  def play
+  end
 
 end
