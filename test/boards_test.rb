@@ -48,4 +48,7 @@ class Boards_Tests < Minitest::Test
     assert_equal expected , boards.add_user_medium_ship("A1A2A3")
   end
 
+  def test_it_can_add_computer_small_ship
+  end
+
 end

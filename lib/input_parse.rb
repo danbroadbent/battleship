@@ -1,7 +1,7 @@
 class InputParse
 
   def parse_whitespace_case(input)
-      input.gsub(/\s+/, "").upcase
+      input.gsub(/\s+\, "").upcase
     end
 
   def valid_length?(input)
