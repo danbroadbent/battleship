@@ -6,15 +6,23 @@ class InputParse
   end
 
   def valid_length?
-    true if @input.length == 4 || @input.length == 6
+    if @input.length == 4 || @input.length == 6
+      true
+    else
+      false
+    end
   end
 
   def is_on_the_board?
-    true if @input.gsub(/[ABCDabcd1234]/, "") == ""
+    if @input.gsub(/[ABCDabcd1234]/, "") == ""
+      true
+    else
+      false
+    end
   end
 
   def ready?
-    if is_on_the_board? == true && valid_length? == true
+    if is_on_the_board? && valid_length?
       true
     else
       false
@@ -22,11 +30,15 @@ class InputParse
   end
 
   def is_in_same_row_small?
-    true if ready? == true && @input[0] == @input[2]
+    if ready? && @input[0] == @input[2]
+      true
+    else
+      false
+    end
   end
 
   def is_in_same_row_medium?
-    if is_in_same_row_small? == true && @input[0] == @input[4]
+    if is_in_same_row_small? && @input[0] == @input[4]
       true
     else
       false
@@ -34,33 +46,57 @@ class InputParse
   end
 
   def is_ajacent_horizontally_small?
-    true if is_in_same_row_small? == true && @input[1].to_i == @input[3].to_i + 1 || @input[1].to_i == @input[3].to_i - 1
+    if is_in_same_row_small? && @input[1].to_i == @input[3].to_i + 1 || @input[1].to_i == @input[3].to_i - 1
+      true
+    else
+      false
+    end
   end
 
   def is_ajacent_horizontally_medium?
-    true if is_ajacent_horizontally_small? == true && @input[1].to_i == @input[5].to_i + 2 || @input[1].to_i == @input[5].to_i - 2
+    if is_ajacent_horizontally_small? && @input[3].to_i == @input[5].to_i + 1 || @input[1].to_i == @input[5].to_i - 2
+      true
+    else
+      false
+    end
   end
 
   def is_in_same_column_small?
-    true if ready? == true && @input[1] == @input[3]
+    if ready? && @input[1] == @input[3]
+      true
+    else
+      false
+    end
   end
 
   def is_in_same_column_medium?
-    true if is_in_same_column_small? == true && @input[1] == @input[5]
+    if is_in_same_column_small? && @input[3] == @input[5]
+      true
+    else
+      false
+    end
   end
 
   def is_ajacent_vertically_small?
-    true if is_in_same_column_small? == true && @input[0].ord == @input[2].ord + 1 || @input[0].ord == @input[2].ord - 1
+    if is_in_same_column_small? && @input[0].ord == @input[2].ord + 1 || @input[0].ord == @input[2].ord - 1
+      true
+    else
+      false
+    end
   end
 
   def is_ajacent_vertically_medium?
-    true if is_ajacent_vertically_small? == true && @input[0].ord == @input[4].ord + 2 || @input[0].ord == @input[4].ord - 2
+    if is_ajacent_vertically_small? && @input[2].ord == @input[4].ord + 1 || @input[2].ord == @input[4].ord - 1
+      true
+    else
+      false
+    end
   end
 
   def is_valid_placement_small?
-    if is_in_same_row_small? == true && is_ajacent_horizontally_small? == true
+    if is_in_same_row_small? && is_ajacent_horizontally_small?
       true
-    elsif is_in_same_column_small? == true && is_ajacent_vertically_small? == true
+    elsif is_in_same_column_small? && is_ajacent_vertically_small?
       true
     else
       false
@@ -68,9 +104,9 @@ class InputParse
   end
 
   def is_valid_placement_medium?
-    if is_in_same_row_medium? == true && is_ajacent_horizontally_medium? == true
+    if is_in_same_row_medium? && is_ajacent_horizontally_medium?
       true
-    elsif is_in_same_column_medium? == true && is_ajacent_vertically_medium? == true
+    elsif is_in_same_column_medium? && is_ajacent_vertically_medium?
       true
     else
       false

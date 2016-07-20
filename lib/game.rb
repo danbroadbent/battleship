@@ -1,5 +1,6 @@
 require './lib/boards'
 require './lib/input_parse'
+require './lib/ship_generator'
 
 
 class Game
@@ -10,7 +11,10 @@ class Game
   end
 
   def generate_computer_small_ship
-    @computer_small_ship = "A1A2"
+    @computer_small_ship = ShipGenerator.new.small_ship
+  end
+
+  def generate_computer_medium_ship
   end
 
   def start

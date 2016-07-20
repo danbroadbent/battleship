@@ -9,4 +9,7 @@ class GameTest < Minitest::Test
     assert_equal "A1A2" , ship
   end
 
+  def test_it_can_generate_medium_ship_coordinates
+  end
+
 end
