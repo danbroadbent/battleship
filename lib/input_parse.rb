@@ -21,8 +21,6 @@ class InputParse
     end
   end
 
-# make sure all inputs are ready for placement
-
   def is_in_same_row_small?
     true if ready? == true && @input[0] == @input[2]
   end
@@ -44,7 +42,7 @@ class InputParse
   end
 
   def is_in_same_column_small?
-    true if @input[1] == @input[3]
+    true if ready? == true && @input[1] == @input[3]
   end
 
   def is_in_same_column_medium?
