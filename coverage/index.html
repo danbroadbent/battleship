@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_red.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.0/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-19T15:51:00-06:00">2016-07-19T15:51:00-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-19T23:03:06-06:00">2016-07-19T23:03:06-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">46.77%</span></span>
+    (<span class="covered_percent"><span class="green">92.86%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.46
+       <span class="green">
+         4.7
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>3</b> files in total.
-    <b>62</b> relevant lines. 
-    <span class="green"><b>29</b> lines covered</span> and
-    <span class="red"><b>33</b> lines missed </span>
+    <b>1</b> files in total.
+    <b>42</b> relevant lines. 
+    <span class="green"><b>39</b> lines covered</span> and
+    <span class="red"><b>3</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -51,33 +51,13 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#435f0fc1637ac38ff7a5ce4eb0d3d7690cf97e95" class="src_link" title="lib/boards.rb">lib/boards.rb</a></td>
-        <td class="red strong">20.0 %</td>
-        <td>60</td>
-        <td>25</td>
-        <td>5</td>
-        <td>20</td>
-        <td>0.2</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#e99d874d0015c500386fa232c4870283f50ff2c2" class="src_link" title="lib/game.rb">lib/game.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>22</td>
-        <td>10</td>
-        <td>10</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
         <td class="strong"><a href="#4b8a21f5ef23b2dc3524b008705870616de7fd0d" class="src_link" title="lib/input_parse.rb">lib/input_parse.rb</a></td>
-        <td class="red strong">51.85 %</td>
-        <td>55</td>
-        <td>27</td>
-        <td>14</td>
-        <td>13</td>
-        <td>0.5</td>
+        <td class="green strong">92.86 %</td>
+        <td>82</td>
+        <td>42</td>
+        <td>39</td>
+        <td>3</td>
+        <td>4.7</td>
       </tr>
       
     </tbody>
@@ -96,14 +76,14 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="435f0fc1637ac38ff7a5ce4eb0d3d7690cf97e95">
+        <div class="source_table" id="4b8a21f5ef23b2dc3524b008705870616de7fd0d">
   <div class="header">
-    <h3>lib/boards.rb</h3>
-    <h4><span class="red">20.0 %</span> covered</h4>
+    <h3>lib/input_parse.rb</h3>
+    <h4><span class="green">92.86 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>20</b> lines missed.</span>
+      <b>42</b> relevant lines. 
+      <span class="green"><b>39</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -113,415 +93,37 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class Boards</code>
+          <code class="ruby">class InputParse</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_accessor :user_ships,</code>
+          <code class="ruby">  attr_reader :input</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">                :user_shots,</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">                :comp_ships,</code>
+          <code class="ruby">  def initialize(input)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="33" data-linenumber="5">
+          <span class="hits">33</span>
           
-          
-          <code class="ruby">                :comp_shots</code>
+          <code class="ruby">    @input = input.gsub(/\s+/, &quot;&quot;).upcase</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def initialize</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
-          
-          <code class="ruby">    @user_ships = [[&quot;.&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],[&quot;A&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;B&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;C&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;D&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;]]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
-          
-          <code class="ruby">    @comp_ships = [[&quot;.&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],[&quot;A&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;B&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;C&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;D&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;]]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="10">
-          
-          
-          <code class="ruby">    @user_shots = [[&quot;.&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],[&quot;A&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;B&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;C&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;D&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;]]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
-          
-          <code class="ruby">    @comp_shots = [[&quot;.&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],[&quot;A&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;B&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;C&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],[&quot;D&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;]]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def add_user_small_ship(user_input)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
-          
-          <code class="ruby">    @user_ships.each do |row|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
-          
-          <code class="ruby">      if row[0] == user_input[0] &amp;&amp; row[0] == user_input[2]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
-          
-          <code class="ruby">        row[user_input[1].to_i] &lt;&lt; &quot;S&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
-          
-          <code class="ruby">        row[user_input[3].to_i] &lt;&lt; &quot;S&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">      elsif row[0] == user_input[0]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
-          
-          <code class="ruby">        row[user_input[1].to_i] &lt;&lt; &quot;S&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">      elsif row[0] == user_input[2]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="22">
-          
-          
-          <code class="ruby">          row[user_input[3].to_i] &lt;&lt; &quot;S&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="25">
-          
-          
-          <code class="ruby">      @user_ships</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def add_user_medium_ship(user_input)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="29">
-          
-          
-          <code class="ruby">    @user_ships.each do |row|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="30">
-          
-          
-          <code class="ruby">      if row[0] == user_input[0] &amp;&amp; row[0] == user_input[2] &amp;&amp; row[0] == user_input[4]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="31">
-          
-          
-          <code class="ruby">        row[user_input[1].to_i] &lt;&lt; &quot;M&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="32">
-          
-          
-          <code class="ruby">        row[user_input[3].to_i] &lt;&lt; &quot;M&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="33">
-          
-          
-          <code class="ruby">        row[user_input[5].to_i] &lt;&lt; &quot;M&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
-          <code class="ruby">      elsif row[0] == user_input[0]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="35">
-          
-          
-          <code class="ruby">        row[user_input[1].to_i] &lt;&lt; &quot;M&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby">      elsif row[0] == user_input[2]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="37">
-          
-          
-          <code class="ruby">          row[user_input[3].to_i] &lt;&lt; &quot;M&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby">      elsif row[0] == user_input[4]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="39">
-          
-          
-          <code class="ruby">          row[user_input[5].to_i] &lt;&lt; &quot;M&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="42">
-          
-          
-          <code class="ruby">      @user_ships</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="44">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="45">
-          
-          
-          <code class="ruby">  # def add_comp_small_ship(((65 + rand(4)).chr + (rand(4) + 1).to_s) + ((65 + rand(4)).chr + (rand(4) + 1).to_s))</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
-          
-          
-          <code class="ruby">  #   @comp_ships.each do |row|</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby">  #     if row[0] == user_input[0] &amp;&amp; row[0] == user_input[2]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
-          <code class="ruby">  #       row[user_input[1].to_i] &lt;&lt; &quot;X&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="49">
-          
-          
-          <code class="ruby">  #       row[user_input[3].to_i] &lt;&lt; &quot;X&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="50">
-          
-          
-          <code class="ruby">  #     elsif row[0] == user_input[0]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
-          <code class="ruby">  #       row[user_input[1].to_i] &lt;&lt; &quot;X&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
-          
-          
-          <code class="ruby">  #     elsif row[0] == user_input[2]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
-          
-          
-          <code class="ruby">  #         row[user_input[3].to_i] &lt;&lt; &quot;X&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="54">
-          
-          
-          <code class="ruby">  #     end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby">  #   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby">  #     @comp_ships</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="57">
-          
-          
-          <code class="ruby">  # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="58">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-      
-        <div class="source_table" id="e99d874d0015c500386fa232c4870283f50ff2c2">
-  <div class="header">
-    <h3>lib/game.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>10</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">require &#39;./lib/boards&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
-          
-          <code class="ruby">require &#39;./lib/input_parse&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="3">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class Game</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  attr_reader :computer_small_ship</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
@@ -533,13 +135,13 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  def initialize</code>
+          <code class="ruby">  def valid_length?</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="21" data-linenumber="9">
+          <span class="hits">21</span>
           
-          <code class="ruby">    @computer_small_ship = &quot;&quot;</code>
+          <code class="ruby">    true if @input.length == 4 || @input.length == 6</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -557,13 +159,13 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">  def generate_computer_small_ship</code>
+          <code class="ruby">  def is_on_the_board?</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="21" data-linenumber="13">
+          <span class="hits">21</span>
           
-          <code class="ruby">    @computer_small_ship = &quot;A1A2&quot;</code>
+          <code class="ruby">    true if @input.gsub(/[ABCDabcd1234]/, &quot;&quot;) == &quot;&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -581,388 +183,400 @@
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">  def start</code>
+          <code class="ruby">  def ready?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="19" data-linenumber="17">
+          <span class="hits">19</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    if is_on_the_board? == true &amp;&amp; valid_length? == true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="covered" data-hits="16" data-linenumber="18">
+          <span class="hits">16</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      true</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="19">
           
-          <code class="ruby">  def play</code>
+          
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="3" data-linenumber="20">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-      
-        <div class="source_table" id="4b8a21f5ef23b2dc3524b008705870616de7fd0d">
-  <div class="header">
-    <h3>lib/input_parse.rb</h3>
-    <h4><span class="red">51.85 %</span> covered</h4>
-    <div>
-      <b>27</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
-      <span class="red"><b>13</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">module InputParse</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.parse_whitespace_case(input)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="4">
-          
-          
-          <code class="ruby">      input.gsub(/\s+/, &quot;&quot;).upcase</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.valid_length?(input)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
-          
-          <code class="ruby">    true if parse_whitespace_case(input).length == 4 || parse_whitespace_case(input).length == 6</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.is_on_the_board?(input)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
-          
-          <code class="ruby">    true if parse_whitespace_case(input).gsub(/[ABCDabcd1234]/, &quot;&quot;) == &quot;&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.is_ready_for_placement_parse?(input)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
-          
-          <code class="ruby">    true if is_on_the_board?(input) &amp;&amp; valid_length?(input)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.is_in_same_row_small?(input)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
-          
-          <code class="ruby">    true if parse_whitespace_case(input)[0] == parse_whitespace_case(input)[2]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="22">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.is_in_same_row_medium?(input)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">    true if is_in_same_row_small?(input) == true &amp;&amp; parse_whitespace_case(input)[0] == parse_whitespace_case(input)[4]</code>
+          <code class="ruby"># make sure all inputs are ready for placement</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.is_ajacent_horizontally_small?(input)</code>
+          <code class="ruby">  def is_in_same_row_small?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
+        <li class="covered" data-hits="15" data-linenumber="27">
+          <span class="hits">15</span>
+          
+          <code class="ruby">    true if ready? == true &amp;&amp; @input[0] == @input[2]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">    true if is_in_same_row_small?(input) == true &amp;&amp; parse_whitespace_case(input)[1].to_i == parse_whitespace_case(input)[3].to_i + 1 || parse_whitespace_case(input)[1].to_i == parse_whitespace_case(input)[3].to_i - 1</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.is_ajacent_horizontally_medium?(input)</code>
+          <code class="ruby">  def is_in_same_row_medium?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
+        <li class="covered" data-hits="5" data-linenumber="31">
+          <span class="hits">5</span>
           
+          <code class="ruby">    if is_in_same_row_small? == true &amp;&amp; @input[0] == @input[4]</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="32">
+          <span class="hits">3</span>
           
-          <code class="ruby">    true if is_ajacent_horizontally_small?(input) == true &amp;&amp; parse_whitespace_case(input)[1].to_i == parse_whitespace_case(input)[5].to_i + 2 || parse_whitespace_case(input)[1].to_i == parse_whitespace_case(input)[5].to_i - 2</code>
+          <code class="ruby">      true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="34">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="35">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.is_in_same_column_small?(input)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="36">
-          
-          
-          <code class="ruby">    true if parse_whitespace_case(input)[1] == parse_whitespace_case(input)[3]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.is_in_same_column_medium?(input)</code>
+          <code class="ruby">  def is_ajacent_horizontally_small?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="40">
+        <li class="covered" data-hits="7" data-linenumber="39">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    true if is_in_same_row_small? == true &amp;&amp; @input[1].to_i == @input[3].to_i + 1 || @input[1].to_i == @input[3].to_i - 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby">    true if is_in_same_column_small?(input) == true &amp;&amp; parse_whitespace_case(input)[1] == parse_whitespace_case(input)[5]</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="42">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="43">
+        <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.is_ajacent_vertically_small?(input)</code>
+          <code class="ruby">  def is_ajacent_horizontally_medium?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="44">
+        <li class="covered" data-hits="4" data-linenumber="43">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    true if is_ajacent_horizontally_small? == true &amp;&amp; @input[1].to_i == @input[5].to_i + 2 || @input[1].to_i == @input[5].to_i - 2</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">    true if is_in_same_column_small?(input) == true &amp;&amp; parse_whitespace_case(input)[0].ord == parse_whitespace_case(input)[2].ord + 1 || parse_whitespace_case(input)[0].ord == parse_whitespace_case(input)[2].ord - 1</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.is_ajacent_vertically_medium?(input)</code>
+          <code class="ruby">  def is_in_same_column_small?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="48">
+        <li class="covered" data-hits="11" data-linenumber="47">
+          <span class="hits">11</span>
+          
+          <code class="ruby">    true if @input[1] == @input[3]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby">    true if is_ajacent_vertically_small?(input) == true &amp;&amp; parse_whitespace_case(input)[0].ord == parse_whitespace_case(input)[4].ord + 2 || parse_whitespace_case(input)[0].ord == parse_whitespace_case(input)[4].ord - 2</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="50">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="51">
+        <li class="covered" data-hits="1" data-linenumber="50">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.is_valid_placement?(input)</code>
+          <code class="ruby">  def is_in_same_column_medium?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="52">
+        <li class="covered" data-hits="3" data-linenumber="51">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    true if is_in_same_column_small? == true &amp;&amp; @input[1] == @input[5]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby">    true if input.length == 4 &amp;&amp; is_ajacent_vertically_small?(input) || is_ajacent_horizontally_small?(input) || input.length == 6 &amp;&amp; is_ajacent_horizontally_medium?(input) || is_ajacent_vertically_medium?(input)</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def is_ajacent_vertically_small?</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="55">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    true if is_in_same_column_small? == true &amp;&amp; @input[0].ord == @input[2].ord + 1 || @input[0].ord == @input[2].ord - 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def is_ajacent_vertically_medium?</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="59">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    true if is_ajacent_vertically_small? == true &amp;&amp; @input[0].ord == @input[4].ord + 2 || @input[0].ord == @input[4].ord - 2</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def is_valid_placement_small?</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="63">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if is_in_same_row_small? == true &amp;&amp; is_ajacent_horizontally_small? == true</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="64">
+          
+          
+          <code class="ruby">      true</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="65">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    elsif is_in_same_column_small? == true &amp;&amp; is_ajacent_vertically_small? == true</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="66">
+          
+          
+          <code class="ruby">      true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="68">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def is_valid_placement_medium?</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="73">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if is_in_same_row_medium? == true &amp;&amp; is_ajacent_horizontally_medium? == true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    elsif is_in_same_column_medium? == true &amp;&amp; is_ajacent_vertically_medium? == true</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="76">
+          
+          
+          <code class="ruby">      true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
           
           
           <code class="ruby">end</code>
