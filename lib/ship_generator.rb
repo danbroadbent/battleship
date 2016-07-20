@@ -29,4 +29,3 @@ class ShipGenerator
   end
 
 end
-# (65 + rand(4)).chr + (rand(4) + 1).to_s) + ((65 + rand(4)).chr + (rand(4) + 1).to_s

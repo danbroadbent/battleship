@@ -9,7 +9,10 @@ class GameTest < Minitest::Test
     assert_equal "A1A2" , ship
   end
 
-  def test_it_can_generate_medium_ship_coordinates
+  def test_it_can_generate_medium_ship_coordinates_dont_overlap
+    game = Game.new
+    ship = game.generate_computer_medium_ship
+    assert_equal "A1A2A3" , ship
   end
 
 end

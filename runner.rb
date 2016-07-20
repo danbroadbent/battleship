@@ -3,9 +3,7 @@ require './lib/boards'
 require './lib/game'
 
 boards = Boards.new
-user_input = InputParse.new
 game = Game.new
-# messages = Messages.new
 
 
   puts "Welcome to BATTLESHIP\n\nWould you like to (p)lay, read the (i)nstructions, or (q)uit?\n>"
