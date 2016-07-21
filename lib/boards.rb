@@ -86,10 +86,30 @@ class Boards
             row[user_input[1].to_i] << "M"
           end
         end
-      elsif row[0] == user_input[0] && (row[user_input[1].to_i] == "S" || row[user_input[1].to_i] == "M")
+      elsif row[0] == user_input[0] && row[user_input[1].to_i] == "S"
         @user_shots.map do |row|
           if row[0] == user_input[0]
             print Messages.player_shot_hit
+            row[user_input[1].to_i] << "H"
+          end
+        end
+      end
+    end
+  end
+
+  def add_comp_shot(user_input)
+    @user_ships.each do |row|
+      if row[0] == user_input[0] && row[user_input[1].to_i] == ""
+        @comp_shots.map do |row|
+          if row[0] == user_input[0]
+            print Messages.comp_shot_miss
+            row[user_input[1].to_i] << "M"
+          end
+        end
+      elsif row[0] == user_input[0] && row[user_input[1].to_i] == "S"
+        @comp_shots.map do |row|
+          if row[0] == user_input[0]
+            print Messages.comp_shot_hit
             row[user_input[1].to_i] << "H"
           end
         end

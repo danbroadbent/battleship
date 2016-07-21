@@ -79,4 +79,11 @@ class Boards_Tests < Minitest::Test
     assert_equal expected , boards.user_shots
   end
 
+  def test_comp_can_take_shot
+    boards = Boards.new
+    expected = [[".","1","2","3","4"],["A","M","","",""],["B","","","",""],["C","","","",""],["D","","","",""]]
+    boards.add_comp_shot("A1")
+    assert_equal expected , boards.comp_shots
+  end
+
 end
